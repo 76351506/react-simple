@@ -154,7 +154,8 @@ module.exports = {
             'common': resolveApp("src/common"),
             'comp': resolveApp("src/components"),
             'view': resolveApp("src/containers"),
-            'router': resolveApp("src/router")
+            'router': resolveApp("src/router"),
+            'store': resolveApp("src/store")
         },
         plugins: [
             // Adds support for installing with Plug'n'Play, leading to faster installs and adding

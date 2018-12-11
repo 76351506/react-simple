@@ -1,11 +1,9 @@
 import React from "react";
 import Header from "comp/header";
 import Layout from "comp/layout";
-
-import "common/css/bootstrap.min.css";
-import "common/css/reset.css";
-import "common/css/common.css";
-import "common/css/style.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import { connect } from "react-redux";
+import RouterView from "router";
 
 class App extends React.Component {
     constructor(props) {
@@ -15,12 +13,21 @@ class App extends React.Component {
         }
     }
     render() {
+        const { classroom } = this.props;
         return <div className="wraper">
             <Header></Header>
             <Layout>
                 this is enter page
+                <h1> welecome to  {classroom}</h1>
+                <Router>
+                    <RouterView/>
+                </Router>
             </Layout>
         </div>
     }
 }
-export default App;
+
+const mapStateToProps = (state) => {
+    return state.HomeReducer
+}
+export default connect(mapStateToProps)(App);
