@@ -11,7 +11,5 @@ const Reducers = combineReducers({
     IndexReducer,
     HomeReducer
 })
-//createStore(纯函数)
-const store = createStore(Reducers)
 
-export default store;
+export default createStore(Reducers)

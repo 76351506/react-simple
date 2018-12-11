@@ -15,15 +15,3 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
-
-
-// const render = () => {
-//     return ReactDOM.render(
-//         <App/>,
-//         document.getElementById('root')
-//     );
-// }
-// render();
-// // store.subscribe 的返回值是一个函数，可以用来取消当前视图的监听
-// const unsubscribe = store.subscribe(render);
-// unsubscribe();
